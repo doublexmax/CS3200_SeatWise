@@ -79,14 +79,17 @@ CREATE TABLE Customers (
 DROP TABLE IF EXISTS Tickets;
 
 CREATE TABLE Tickets (
-    TicketID int PRIMARY KEY,
+    TicketID int NOT NULL,
+    VenueID int NOT NULL,
     Price double NOT NULL,
     Seat_Row varchar(25) NOT NULL,
     Section varchar(25) NOT NULL,
     Seat_Column varchar(25) NOT NULL,
     Type varchar(255) NOT NULL,
     CustomerID int NOT NULL,
-    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+    PRIMARY KEY (TicketID, VenueID),
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
+    FOREIGN KEY (VenueID) REFERENCES Venues(VenueID)
 );
 
 DROP TABLE IF EXISTS Dependent;
