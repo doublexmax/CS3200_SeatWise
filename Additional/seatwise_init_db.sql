@@ -9,8 +9,8 @@ DROP TABLE IF EXISTS Venues;
 CREATE TABLE Venues (
     VenueID int PRIMARY KEY,
     VenueName varchar(255) NOT NULL,
-    PhoneNumber varchar(25),
-    Email varchar(255),
+    PhoneNumber varchar(25) UNIQUE,
+    Email varchar(255) UNIQUE,
     Street varchar(255) NOT NULL,
     City varchar(255) NOT NULL,
     State varchar(255) NOT NULL,
@@ -27,8 +27,8 @@ DROP TABLE IF EXISTS VenueOwner;
 CREATE TABLE VenueOwner (
     OwnerID int PRIMARY KEY,
     OwnerName varchar(255) NOT NULL,
-    PhoneNumber varchar(25),
-    Email varchar(255),
+    PhoneNumber varchar(25) UNIQUE NOT NULL,
+    Email varchar(255) UNIQUE NOT NULL,
     CONSTRAINT u_email UNIQUE (Email),
     CONSTRAINT u_ph UNIQUE (PhoneNumber)
 );
@@ -38,8 +38,8 @@ DROP TABLE IF EXISTS Artists;
 CREATE TABLE Artists (
     ArtistID int PRIMARY KEY,
     ArtistName varchar(255) NOT NULL,
-    PhoneNumber varchar(25),
-    Email varchar(255),
+    PhoneNumber varchar(25) UNIQUE NOT NULL,
+    Email varchar(255) UNIQUE NOT NULL,
     Description varchar(255),
     CONSTRAINT u_email UNIQUE (Email),
     CONSTRAINT u_ph UNIQUE (PhoneNumber)
@@ -72,8 +72,8 @@ DROP TABLE IF EXISTS Customers;
 CREATE TABLE Customers (
     CustomerID int PRIMARY KEY,
     Name varchar(255) NOT NULL,
-    PhoneNumber varchar(25),
-    Email varchar(255),
+    PhoneNumber varchar(25) UNIQUE NOT NULL,
+    Email varchar(255) UNIQUE NOT NULL,
     DOB date NOT NULL,
     Street varchar(255),
     City varchar(255),
@@ -105,8 +105,8 @@ DROP TABLE IF EXISTS Dependent;
 CREATE TABLE Dependent (
     DependentID int PRIMARY KEY,
     Name varchar(255) NOT NULL,
-    PhoneNumber varchar(25),
-    Email varchar(255),
+    PhoneNumber varchar(25)  UNIQUE NOT NULL,
+    Email varchar(255) UNIQUE NOT NULL,
     Street varchar(255),
     City varchar(255),
     State varchar(255),
