@@ -216,7 +216,7 @@
                     },
                     {
                       "widgetName": "NumberSlider1",
-                      "defaultValue": 10,
+                      "defaultValue": "10",
                       "displayName": "Number Slider",
                       "iconSVG": "/static/media/icon.f122000eb591fcd1410a4775a54f9f0d.svg",
                       "tooltipAlwaysOn": false,
@@ -247,7 +247,7 @@
                       "labelTextSize": "0.875rem",
                       "isDeprecated": false,
                       "rightColumn": 45,
-                      "max": 100,
+                      "max": "6",
                       "widgetId": "km9qokgmqy",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
@@ -852,7 +852,7 @@
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "Input2",
+                      "widgetName": "CusStreet1",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
                       "searchTags": [
