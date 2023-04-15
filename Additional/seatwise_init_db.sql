@@ -26,7 +26,8 @@ DROP TABLE IF EXISTS VenueOwner;
 
 CREATE TABLE VenueOwner (
     OwnerID int PRIMARY KEY,
-    OwnerName varchar(255) NOT NULL,
+    FirstName varchar(255) NOT NULL,
+    LastName varchar(255) NOT NULL,
     PhoneNumber varchar(25) UNIQUE NOT NULL,
     Email varchar(255) UNIQUE NOT NULL,
     CONSTRAINT u_email UNIQUE (Email),
@@ -37,7 +38,8 @@ DROP TABLE IF EXISTS Artists;
 
 CREATE TABLE Artists (
     ArtistID int PRIMARY KEY,
-    ArtistName varchar(255) NOT NULL,
+    FirstName varchar(255) NOT NULL,
+    LastName varchar(255) NOT NULL,
     PhoneNumber varchar(25) UNIQUE NOT NULL,
     Email varchar(255) UNIQUE NOT NULL,
     Description varchar(255),
@@ -70,8 +72,9 @@ CREATE TABLE Venues_Artist (
 DROP TABLE IF EXISTS Customers;
 
 CREATE TABLE Customers (
-    CustomerID int PRIMARY KEY,
-    Name varchar(255) NOT NULL,
+    CustomerID int PRIMARY KEY auto_increment,
+    FirstName varchar(255) NOT NULL,
+    LastName varchar(255) NOT NULL,
     PhoneNumber varchar(25) UNIQUE NOT NULL,
     Email varchar(255) UNIQUE NOT NULL,
     DOB date NOT NULL,
@@ -87,7 +90,7 @@ CREATE TABLE Customers (
 DROP TABLE IF EXISTS Tickets;
 
 CREATE TABLE Tickets (
-    TicketID int NOT NULL,
+    TicketID int NOT NULL auto_increment,
     VenueID int NOT NULL,
     Price double NOT NULL,
     Seat_Row varchar(25) NOT NULL,
@@ -104,7 +107,8 @@ DROP TABLE IF EXISTS Dependent;
 
 CREATE TABLE Dependent (
     DependentID int PRIMARY KEY,
-    Name varchar(255) NOT NULL,
+    FirstName varchar(255) NOT NULL,
+    LastName varchar(255) NOT NULL,
     PhoneNumber varchar(25)  UNIQUE NOT NULL,
     Email varchar(255) UNIQUE NOT NULL,
     Street varchar(255),
