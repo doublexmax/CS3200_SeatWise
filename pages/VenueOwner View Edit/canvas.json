@@ -1081,7 +1081,7 @@
               "originalTopRow": 227,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 282,
+              "originalBottomRow": 249,
               "minDynamicHeight": 10
             },
             {
@@ -1247,7 +1247,11 @@
                       "defaultOptionValue": "GREEN",
                       "animateLoading": true,
                       "parentColumnSpace": 11.236328125,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onOptionChange"
+                        }
+                      ],
                       "leftColumn": 2,
                       "dynamicBindingPathList": [
                         {
@@ -1258,7 +1262,7 @@
                         }
                       ],
                       "labelPosition": "Top",
-                      "options": "[\n  {\n    \"label\": \"Beryle\",\n    \"value\": \"1\"\n  },\n  {\n    \"label\": \"Green\",\n    \"value\": \"GREEN\"\n  },\n  {\n    \"label\": \"Red\",\n    \"value\": \"RED\"\n  }\n]",
+                      "options": "[\n  {\n    \"label\": \"Beryle\",\n    \"value\": \"1\"\n  },\n  {\n    \"label\": \"Sebastian\",\n    \"value\": \"2\"\n  }\n]",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "wsl7l8m7mt",
@@ -1281,6 +1285,7 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
                       "originalBottomRow": 23,
+                      "onOptionChange": "{{GetTickets.run()}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -1304,9 +1309,6 @@
                           "key": "tableData"
                         },
                         {
-                          "key": "primaryColumns.Availability.computedValue"
-                        },
-                        {
                           "key": "primaryColumns.Seat_Column.computedValue"
                         },
                         {
@@ -1317,6 +1319,9 @@
                         },
                         {
                           "key": "primaryColumns.Type.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.Customer.computedValue"
                         }
                       ],
                       "needsHeightForContent": true,
@@ -1355,7 +1360,7 @@
                         }
                       },
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "columnUpdatedAt": 1681672079541,
+                      "columnUpdatedAt": 1681674222308,
                       "originalBottomRow": 51,
                       "defaultSelectedRowIndices": [
                         0
@@ -1363,11 +1368,11 @@
                       "widgetName": "ViewSeatAvailability",
                       "defaultPageSize": 0,
                       "columnOrder": [
-                        "Availability",
                         "Seat_Column",
                         "Seat_Row",
                         "Section",
-                        "Type"
+                        "Type",
+                        "Customer"
                       ],
                       "dynamicPropertyPathList": [],
                       "displayName": "Table",
@@ -1388,35 +1393,6 @@
                       "dynamicTriggerPathList": [],
                       "borderWidth": "1",
                       "primaryColumns": {
-                        "Availability": {
-                          "allowCellWrapping": false,
-                          "index": 0,
-                          "width": 150,
-                          "originalId": "Availability",
-                          "id": "Availability",
-                          "alias": "Availability",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "TOP",
-                          "columnType": "text",
-                          "textColor": "",
-                          "textSize": "0.875rem",
-                          "fontStyle": "",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "Availability",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "{{ViewSeatAvailability.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Availability\"]))}}",
-                          "sticky": "",
-                          "validation": {},
-                          "cellBackground": ""
-                        },
                         "Seat_Column": {
                           "allowCellWrapping": false,
                           "index": 1,
@@ -1529,6 +1505,35 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{ViewSeatAvailability.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Type\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "Customer": {
+                          "allowCellWrapping": false,
+                          "index": 0,
+                          "width": 150,
+                          "originalId": "Customer",
+                          "id": "Customer",
+                          "alias": "Customer",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "TOP",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Customer",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{ViewSeatAvailability.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Customer\"]))}}",
                           "sticky": "",
                           "validation": {},
                           "cellBackground": ""
