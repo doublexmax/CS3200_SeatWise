@@ -7,7 +7,7 @@ SET FOREIGN_KEY_CHECKS=0;
 DROP TABLE IF EXISTS Venues;
 
 CREATE TABLE Venues (
-    VenueID int PRIMARY KEY auto_incremenet,
+    VenueID int PRIMARY KEY auto_increment,
     VenueName varchar(255) NOT NULL,
     PhoneNumber varchar(25) UNIQUE,
     Email varchar(255) UNIQUE,
@@ -25,7 +25,7 @@ CREATE TABLE Venues (
 DROP TABLE IF EXISTS VenueOwner;
 
 CREATE TABLE VenueOwner (
-    OwnerID int PRIMARY KEY auto_incremenet,
+    OwnerID int PRIMARY KEY auto_increment,
     FirstName varchar(255) NOT NULL,
     LastName varchar(255) NOT NULL,
     PhoneNumber varchar(25) UNIQUE NOT NULL,
@@ -37,7 +37,7 @@ CREATE TABLE VenueOwner (
 DROP TABLE IF EXISTS Artists;
 
 CREATE TABLE Artists (
-    ArtistID int PRIMARY KEY auto_incremenet,
+    ArtistID int PRIMARY KEY auto_increment,
     FirstName varchar(255) NOT NULL,
     LastName varchar(255) NOT NULL,
     PhoneNumber varchar(25) UNIQUE NOT NULL,
@@ -50,7 +50,7 @@ CREATE TABLE Artists (
 DROP TABLE IF EXISTS Contract;
 
 CREATE TABLE Contract (
-    ContractID int PRIMARY KEY auto_incremenet,
+    ContractID int PRIMARY KEY auto_increment,
     Date_Signed datetime,
     Description varchar(255),
     ArtistID int NOT NULL,
