@@ -982,7 +982,7 @@
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "Select1Copy",
+                      "widgetName": "Venue",
                       "isFilterable": true,
                       "displayName": "Select",
                       "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
@@ -1008,23 +1008,13 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "options"
                         }
                       ],
                       "labelPosition": "Top",
-                      "options": [
-                        {
-                          "label": "Blue",
-                          "value": "BLUE"
-                        },
-                        {
-                          "label": "Green",
-                          "value": "GREEN"
-                        },
-                        {
-                          "label": "Red",
-                          "value": "RED"
-                        }
-                      ],
+                      "options": "{{GetVenues.data}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "qcg5s9s53i",
@@ -1828,10 +1818,13 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "options"
                         }
                       ],
                       "labelPosition": "Top",
-                      "options": "[\n  {\n    \"label\": \"Sebastian\",\n    \"value\": \"1\"\n  },\n  {\n    \"label\": \"Unknown\",\n    \"value\": \"-1\"\n  }\n]",
+                      "options": "{{GetVenueOwners.data}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "48mexzl75r",
@@ -1855,6 +1848,68 @@
                       "maxDynamicHeight": 9000,
                       "originalBottomRow": 15,
                       "onOptionChange": "{{JSObject2.myFun1()}}",
+                      "minDynamicHeight": 4
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Input1",
+                      "displayName": "Input",
+                      "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
+                      "searchTags": [
+                        "form",
+                        "text input",
+                        "number",
+                        "textarea"
+                      ],
+                      "topRow": 4,
+                      "bottomRow": 11,
+                      "parentRowSpace": 10,
+                      "labelWidth": 5,
+                      "autoFocus": false,
+                      "type": "INPUT_WIDGET_V2",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 18.49609375,
+                      "dynamicTriggerPathList": [],
+                      "resetOnSubmit": true,
+                      "leftColumn": 34,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        },
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "defaultText"
+                        }
+                      ],
+                      "labelPosition": "Top",
+                      "labelStyle": "",
+                      "inputType": "TEXT",
+                      "isDisabled": false,
+                      "key": "mp1l5hgozq",
+                      "labelTextSize": "0.875rem",
+                      "isRequired": false,
+                      "isDeprecated": false,
+                      "rightColumn": 54,
+                      "dynamicHeight": "FIXED",
+                      "widgetId": "gcjjoumow4",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "showStepArrows": false,
+                      "minWidth": 450,
+                      "isVisible": true,
+                      "label": "Label",
+                      "version": 2,
+                      "parentId": "5a8bx0g4ia",
+                      "labelAlignment": "left",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "responsiveBehavior": "fill",
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "maxDynamicHeight": 9000,
+                      "iconAlign": "left",
+                      "defaultText": "{{SelectVenue.selectedOptionLabel}}",
                       "minDynamicHeight": 4
                     }
                   ],
@@ -1888,10 +1943,10 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "responsiveBehavior": "fill",
-              "originalTopRow": 13,
+              "originalTopRow": 6,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 103,
+              "originalBottomRow": 96,
               "minDynamicHeight": 10
             },
             {
@@ -2482,6 +2537,14 @@
               "jsonPathKeys": [
                 "SelectVenue.selectedOptionValue"
               ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "VenueOwner View Edit_GetVenueOwners",
+              "name": "GetVenueOwners",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             },
             {
