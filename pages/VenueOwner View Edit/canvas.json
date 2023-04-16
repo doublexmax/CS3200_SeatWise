@@ -1849,68 +1849,6 @@
                       "originalBottomRow": 15,
                       "onOptionChange": "{{JSObject2.myFun1()}}",
                       "minDynamicHeight": 4
-                    },
-                    {
-                      "boxShadow": "none",
-                      "widgetName": "Input1",
-                      "displayName": "Input",
-                      "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
-                      "searchTags": [
-                        "form",
-                        "text input",
-                        "number",
-                        "textarea"
-                      ],
-                      "topRow": 4,
-                      "bottomRow": 11,
-                      "parentRowSpace": 10,
-                      "labelWidth": 5,
-                      "autoFocus": false,
-                      "type": "INPUT_WIDGET_V2",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 18.49609375,
-                      "dynamicTriggerPathList": [],
-                      "resetOnSubmit": true,
-                      "leftColumn": 34,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "accentColor"
-                        },
-                        {
-                          "key": "borderRadius"
-                        },
-                        {
-                          "key": "defaultText"
-                        }
-                      ],
-                      "labelPosition": "Top",
-                      "labelStyle": "",
-                      "inputType": "TEXT",
-                      "isDisabled": false,
-                      "key": "mp1l5hgozq",
-                      "labelTextSize": "0.875rem",
-                      "isRequired": false,
-                      "isDeprecated": false,
-                      "rightColumn": 54,
-                      "dynamicHeight": "FIXED",
-                      "widgetId": "gcjjoumow4",
-                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "showStepArrows": false,
-                      "minWidth": 450,
-                      "isVisible": true,
-                      "label": "Label",
-                      "version": 2,
-                      "parentId": "5a8bx0g4ia",
-                      "labelAlignment": "left",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "responsiveBehavior": "fill",
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "maxDynamicHeight": 9000,
-                      "iconAlign": "left",
-                      "defaultText": "{{SelectVenue.selectedOptionLabel}}",
-                      "minDynamicHeight": 4
                     }
                   ],
                   "key": "air09s7uxb",
@@ -1943,10 +1881,10 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "responsiveBehavior": "fill",
-              "originalTopRow": 6,
+              "originalTopRow": 13,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 96,
+              "originalBottomRow": 103,
               "minDynamicHeight": 10
             },
             {
@@ -2307,10 +2245,13 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "options"
                         }
                       ],
                       "labelPosition": "Top",
-                      "options": "[\n  {\n    \"label\": \"Sebastian\",\n    \"value\": \"1\"\n  },\n  {\n    \"label\": \"Green\",\n    \"value\": \"GREEN\"\n  },\n  {\n    \"label\": \"Red\",\n    \"value\": \"RED\"\n  }\n]",
+                      "options": "{{GetVenueOwners.data}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "48mexzl75r",
