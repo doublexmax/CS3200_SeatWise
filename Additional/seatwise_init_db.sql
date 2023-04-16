@@ -92,6 +92,7 @@ DROP TABLE IF EXISTS Tickets;
 CREATE TABLE Tickets (
     TicketID int NOT NULL auto_increment,
     VenueID int NOT NULL,
+    PerformanceID int NOT NULL,
     Price double NOT NULL,
     Seat_Row varchar(25) NOT NULL,
     Section varchar(25) NOT NULL,
@@ -100,7 +101,8 @@ CREATE TABLE Tickets (
     CustomerID int,
     PRIMARY KEY (TicketID, VenueID),
     FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
-    FOREIGN KEY (VenueID) REFERENCES Venues(VenueID)
+    FOREIGN KEY (VenueID) REFERENCES Venues(VenueID),
+    FOREIGN KEY (PerformanceID) REFERENCES Perforamnce(PerformanceID)
 );
 
 DROP TABLE IF EXISTS Dependent;
