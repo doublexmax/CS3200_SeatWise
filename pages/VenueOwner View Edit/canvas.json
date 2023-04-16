@@ -199,20 +199,7 @@
                         }
                       ],
                       "labelPosition": "Top",
-                      "options": [
-                        {
-                          "label": "Blue",
-                          "value": "BLUE"
-                        },
-                        {
-                          "label": "Green",
-                          "value": "GREEN"
-                        },
-                        {
-                          "label": "Red",
-                          "value": "RED"
-                        }
-                      ],
+                      "options": "[\n  {\n    \"label\": \"Beryle\",\n    \"value\": \"1\"\n  },\n  {\n    \"label\": \"Green\",\n    \"value\": \"GREEN\"\n  },\n  {\n    \"label\": \"Red\",\n    \"value\": \"RED\"\n  }\n]",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "wsl7l8m7mt",
@@ -249,22 +236,28 @@
                       "animateLoading": true,
                       "dynamicBindingPathList": [
                         {
-                          "key": "primaryColumns.step.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.task.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.status.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.action.computedValue"
-                        },
-                        {
                           "key": "accentColor"
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "tableData"
+                        },
+                        {
+                          "key": "primaryColumns.Availability.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.Seat_Column.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.Seat_Row.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.Section.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.Type.computedValue"
                         }
                       ],
                       "needsHeightForContent": true,
@@ -303,7 +296,7 @@
                         }
                       },
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "columnUpdatedAt": 1681588129426,
+                      "columnUpdatedAt": 1681671801062,
                       "originalBottomRow": 51,
                       "defaultSelectedRowIndices": [
                         0
@@ -311,11 +304,12 @@
                       "widgetName": "ViewSeatAvailability",
                       "defaultPageSize": 0,
                       "columnOrder": [
-                        "step",
-                        "task",
-                        "status",
-                        "action",
-                        "customColumn1"
+                        "customColumn1",
+                        "Availability",
+                        "Seat_Column",
+                        "Seat_Row",
+                        "Section",
+                        "Type"
                       ],
                       "dynamicPropertyPathList": [],
                       "displayName": "Table",
@@ -332,100 +326,6 @@
                       "dynamicTriggerPathList": [],
                       "borderWidth": "1",
                       "primaryColumns": {
-                        "step": {
-                          "index": 0,
-                          "width": 150,
-                          "id": "step",
-                          "originalId": "step",
-                          "alias": "step",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "TOP",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isCellVisible": true,
-                          "isCellEditable": false,
-                          "isDerived": false,
-                          "label": "Type",
-                          "computedValue": "{{ViewSeatAvailability.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"step\"]))}}",
-                          "validation": {},
-                          "sticky": "",
-                          "labelColor": "#FFFFFF",
-                          "isEditable": false
-                        },
-                        "task": {
-                          "index": 1,
-                          "width": 150,
-                          "id": "task",
-                          "originalId": "task",
-                          "alias": "task",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "TOP",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isCellVisible": true,
-                          "isCellEditable": false,
-                          "isDerived": false,
-                          "label": "Seat Section",
-                          "computedValue": "{{ViewSeatAvailability.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"task\"]))}}",
-                          "validation": {},
-                          "sticky": "",
-                          "labelColor": "#FFFFFF",
-                          "isEditable": false
-                        },
-                        "status": {
-                          "index": 2,
-                          "width": 150,
-                          "id": "status",
-                          "originalId": "status",
-                          "alias": "status",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "TOP",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isCellVisible": true,
-                          "isCellEditable": false,
-                          "isDerived": false,
-                          "label": "Seat Row",
-                          "computedValue": "{{ViewSeatAvailability.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"status\"]))}}",
-                          "validation": {},
-                          "sticky": "",
-                          "labelColor": "#FFFFFF",
-                          "isEditable": false
-                        },
-                        "action": {
-                          "index": 3,
-                          "width": 150,
-                          "id": "action",
-                          "originalId": "action",
-                          "alias": "action",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "TOP",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isCellVisible": true,
-                          "isCellEditable": false,
-                          "isDisabled": false,
-                          "isDerived": false,
-                          "label": "Seat Column",
-                          "onClick": "{{currentRow.step === '#1' ? showAlert('Done', 'success') : currentRow.step === '#2' ? navigateTo('https://docs.appsmith.com/core-concepts/connecting-to-data-sources/querying-a-database',undefined,'NEW_WINDOW') : navigateTo('https://docs.appsmith.com/core-concepts/displaying-data-read/display-data-tables',undefined,'NEW_WINDOW')}}",
-                          "computedValue": "{{ViewSeatAvailability.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"action\"]))}}",
-                          "validation": {},
-                          "sticky": "",
-                          "labelColor": "#FFFFFF",
-                          "customAlias": ""
-                        },
                         "customColumn1": {
                           "allowCellWrapping": false,
                           "index": 4,
@@ -453,6 +353,151 @@
                           "validation": {},
                           "buttonStyle": "rgb(3, 179, 101)",
                           "labelColor": "#FFFFFF"
+                        },
+                        "Availability": {
+                          "allowCellWrapping": false,
+                          "index": 0,
+                          "width": 150,
+                          "originalId": "Availability",
+                          "id": "Availability",
+                          "alias": "Availability",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "TOP",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Availability",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{ViewSeatAvailability.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Availability\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "Seat_Column": {
+                          "allowCellWrapping": false,
+                          "index": 1,
+                          "width": 150,
+                          "originalId": "Seat_Column",
+                          "id": "Seat_Column",
+                          "alias": "Seat_Column",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "TOP",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Seat_Column",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{ViewSeatAvailability.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Seat_Column\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "Seat_Row": {
+                          "allowCellWrapping": false,
+                          "index": 2,
+                          "width": 150,
+                          "originalId": "Seat_Row",
+                          "id": "Seat_Row",
+                          "alias": "Seat_Row",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "TOP",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Seat_Row",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{ViewSeatAvailability.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Seat_Row\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "Section": {
+                          "allowCellWrapping": false,
+                          "index": 3,
+                          "width": 150,
+                          "originalId": "Section",
+                          "id": "Section",
+                          "alias": "Section",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "TOP",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Section",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{ViewSeatAvailability.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Section\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "Type": {
+                          "allowCellWrapping": false,
+                          "index": 4,
+                          "width": 150,
+                          "originalId": "Type",
+                          "id": "Type",
+                          "alias": "Type",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "TOP",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Type",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{ViewSeatAvailability.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Type\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": ""
                         }
                       },
                       "key": "26n6e2rmuo",
@@ -462,7 +507,7 @@
                       "textSize": "0.875rem",
                       "widgetId": "oloxqlrjpk",
                       "minWidth": 450,
-                      "tableData": "[\n  {\n    \"step\": \"Economy\",\n    \"task\": \"Drop a table\",\n    \"status\": \"--\",\n    \"action\": \"\"\n  },\n  {\n    \"step\": \"VVIP\",\n    \"task\": \"--\",\n    \"status\": \"--\",\n    \"action\": \"\"\n  },\n  {\n    \"step\": \"Economy\",\n    \"task\": \"--\",\n    \"status\": \"--\",\n    \"action\": \"\"\n  }\n]",
+                      "tableData": "{{GetTickets.data}}",
                       "label": "Data",
                       "searchKey": "",
                       "parentId": "5a8bx0g4ia",
@@ -712,7 +757,7 @@
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "Select3",
+                      "widgetName": "VenueOwner",
                       "isFilterable": true,
                       "displayName": "Select",
                       "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
@@ -741,20 +786,7 @@
                         }
                       ],
                       "labelPosition": "Top",
-                      "options": [
-                        {
-                          "label": "Blue",
-                          "value": "BLUE"
-                        },
-                        {
-                          "label": "Green",
-                          "value": "GREEN"
-                        },
-                        {
-                          "label": "Red",
-                          "value": "RED"
-                        }
-                      ],
+                      "options": "[\n  {\n    \"label\": \"Sebastian\",\n    \"value\": \"1\"\n  },\n  {\n    \"label\": \"Green\",\n    \"value\": \"GREEN\"\n  },\n  {\n    \"label\": \"Red\",\n    \"value\": \"RED\"\n  }\n]",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "48mexzl75r",
@@ -818,7 +850,20 @@
             }
           ]
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "VenueOwner View Edit_GetTickets",
+              "name": "GetTickets",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "SelectVenue.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
         "id": "VenueOwner View Edit",
