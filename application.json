@@ -3,6 +3,22 @@
     {
       "id": "Page1",
       "isDefault": true
+    },
+    {
+      "id": "VenueOwner Sign Up",
+      "isDefault": false
+    },
+    {
+      "id": "VenueOwner View Edit",
+      "isDefault": false
+    },
+    {
+      "id": "Customer Sign Up",
+      "isDefault": false
+    },
+    {
+      "id": "Customer Purchase Edit",
+      "isDefault": false
     }
   ],
   "viewMode": false,
