@@ -102,7 +102,7 @@ CREATE TABLE Tickets (
     PRIMARY KEY (TicketID, VenueID),
     FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
     FOREIGN KEY (VenueID) REFERENCES Venues(VenueID),
-    FOREIGN KEY (PerformanceID) REFERENCES Perforamnce(PerformanceID)
+    FOREIGN KEY (PerformanceID) REFERENCES Performance(PerformanceID)
 );
 
 DROP TABLE IF EXISTS Dependent;
@@ -271,38 +271,6 @@ INSERT INTO Customers(CustomerID,FirstName,LastName,PhoneNumber,Email,DOB,Street
 INSERT INTO Customers(CustomerID,FirstName,LastName,PhoneNumber,Email,DOB,Street,City,State,Zipcode,Country) VALUES (14,'Gasparo','Dmisek','210-457-3075','gdmisekd@virginia.edu','2019-02-24','0 Vahlen Trail','San Antonio','TX',79407,'US');
 INSERT INTO Customers(CustomerID,FirstName,LastName,PhoneNumber,Email,DOB,Street,City,State,Zipcode,Country) VALUES (15,'Arabele','Cockings','812-931-2099','acockingse@moonfruit.com','2003-03-12','65 Lunder Road','Terre Haute','IN',39440,'US');
 
-INSERT INTO Tickets(TicketID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (1,9,982.46,621,'1U',41,'Normal',15);
-INSERT INTO Tickets(TicketID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (2,3,619.04,197,'7I',81,'Normal',5);
-INSERT INTO Tickets(TicketID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (3,4,799.65,037,'8G',33,'Backstage',11);
-INSERT INTO Tickets(TicketID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (4,13,976.69,278,'9B',52,'Normal',7);
-INSERT INTO Tickets(TicketID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (5,6,527.38,407,'4H',62,'Normal',NULL);
-INSERT INTO Tickets(TicketID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (6,10,212.83,725,'1E',46,'Normal',15);
-INSERT INTO Tickets(TicketID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (7,8,884.06,652,'5M',02,'Normal',11);
-INSERT INTO Tickets(TicketID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (8,1,916.17,684,'8V',47,'Normal',3);
-INSERT INTO Tickets(TicketID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (9,15,470.66,770,'2X',91,'Normal',NULL);
-INSERT INTO Tickets(TicketID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (10,14,428.48,823,'1B',66,'Normal',2);
-INSERT INTO Tickets(TicketID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (11,7,414.13,225,'1Z',30,'Backstage',14);
-INSERT INTO Tickets(TicketID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (12,12,031.97,174,'9C',93,'Normal',4);
-INSERT INTO Tickets(TicketID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (13,11,964.57,270,'0J',49,'Backstage',NULL);
-INSERT INTO Tickets(TicketID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (14,2,753.58,207,'0U',36,'Normal',2);
-INSERT INTO Tickets(TicketID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (15,5,809.06,705,'3E',48,'Normal',14);
-
-INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (1,'Sandro','Engeham','502-782-5734','sengeham0@wiley.com','0 Forest Dale Way','Louisville','KY',59179,'US','4','Emergency Contact');
-INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (2,'Eal','Wallhead','805-498-4138','ewallhead1@wikipedia.org','96820 Gulseth Hill','San Mateo','CA',23258,'US','7','Friend');
-INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (3,'Zola','Insull','702-584-7775','zinsull2@walmart.com','71326 Kensington Circle','Las Vegas','NV',88329,'US','1','Friend');
-INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (4,'Jaquelin','Pedlingham','952-560-8759','jpedlingham3@spiegel.de','00525 Mandrake Way','Young America','MN',28438,'US','11','Cousin');
-INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (5,'Torin','Pelham','407-104-9062','tpelham4@sogou.com','4 Eagle Crest Center','Orlando','FL',65002,'US','12','Friend');
-INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (6,'Isadora','Doughartie','602-219-7497','idoughartie5@yellowpages.com','14 Sloan Pass','Phoenix','AZ',84852,'US','13','Friend');
-INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (7,'Preston','Reagan','540-515-4435','preagan6@reference.com','08 Union Parkway','Roanoke','VA',29782,'US','4','Friend');
-INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (8,'Harper','Longworth','803-576-9090','hlongworth7@fotki.com','8784 Hanover Way','Columbia','SC',82034,'US','14','Friend');
-INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (9,'Flossie','Le Gallo','415-143-9191','flegallo8@i2i.jp','1749 Trailsway Point','San Francisco','CA',38623,'US','11','Friend');
-INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (10,'Thelma','Heinke','716-220-8216','theinke9@howstuffworks.com','8487 Sugar Alley','Buffalo','NY',86674,'US','3','Friend');
-INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (11,'Annie','Rubrow','318-251-5311','arubrowa@yale.edu','7 Dixon Court','Shreveport','LA',69721,'US','10','Friend');
-INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (12,'Franny','Syncke','202-146-8272','fsynckeb@theguardian.com','73106 Red Cloud Street','Washington','DC',21839,'US','3','Friend');
-INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (13,'Laurie','Shay','916-290-1034','lshayc@networksolutions.com','8673 Union Center','Sacramento','CA',59336,'US','14','Sister');
-INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (14,'Terri-jo','Coggon','716-210-2638','tcoggond@hugedomains.com','6 Manley Court','Buffalo','NY',89631,'US','15','Friend');
-INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (15,'Elnore','Garnett','336-290-5828','egarnette@webnode.com','20 Basil Street','Greensboro','NC',50032,'US','3','Friend');
-
 INSERT INTO Performance(PerformanceID,Date,Description,ArtistID,VenueID) VALUES (1,'2022-02-03','Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum.',10,3);
 INSERT INTO Performance(PerformanceID,Date,Description,ArtistID,VenueID) VALUES (2,'2022-09-06','Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.',13,13);
 INSERT INTO Performance(PerformanceID,Date,Description,ArtistID,VenueID) VALUES (3,'2020-04-07','In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh.',14,12);
@@ -319,6 +287,38 @@ INSERT INTO Performance(PerformanceID,Date,Description,ArtistID,VenueID) VALUES 
 INSERT INTO Performance(PerformanceID,Date,Description,ArtistID,VenueID) VALUES (14,'2022-09-28','Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim.',5,5);
 INSERT INTO Performance(PerformanceID,Date,Description,ArtistID,VenueID) VALUES (15,'2022-07-10','Etiam pretium iaculis justo. In hac habitasse platea dictumst.',12,4);
 
+
+INSERT INTO Tickets(TicketID,PerformanceID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (1,1,15,982.46,621,'1U',41,'Normal',15);
+INSERT INTO Tickets(TicketID,PerformanceID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (2,1,3,619.04,197,'7I',81,'Normal',5);
+INSERT INTO Tickets(TicketID,PerformanceID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (3,1,4,799.65,037,'8G',33,'Backstage',11);
+INSERT INTO Tickets(TicketID,PerformanceID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (4,2,13,976.69,278,'9B',52,'Normal',7);
+INSERT INTO Tickets(TicketID,PerformanceID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (5,2,6,527.38,407,'4H',62,'Normal',NULL);
+INSERT INTO Tickets(TicketID,PerformanceID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (6,2,10,212.83,725,'1E',46,'Normal',15);
+INSERT INTO Tickets(TicketID,PerformanceID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (7,2,8,884.06,652,'5M',02,'Normal',11);
+INSERT INTO Tickets(TicketID,PerformanceID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (8,3,1,916.17,684,'8V',47,'Normal',3);
+INSERT INTO Tickets(TicketID,PerformanceID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (9,3,15,470.66,770,'2X',91,'Normal',NULL);
+INSERT INTO Tickets(TicketID,PerformanceID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (10,3,14,428.48,823,'1B',66,'Normal',2);
+INSERT INTO Tickets(TicketID,PerformanceID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (11,4,7,414.13,225,'1Z',30,'Backstage',14);
+INSERT INTO Tickets(TicketID,PerformanceID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (12,5,12,031.97,174,'9C',93,'Normal',4);
+INSERT INTO Tickets(TicketID,PerformanceID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (13,5,11,964.57,270,'0J',49,'Backstage',NULL);
+INSERT INTO Tickets(TicketID,PerformanceID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (14,5,2,753.58,207,'0U',36,'Normal',2);
+INSERT INTO Tickets(TicketID,PerformanceID,VenueID,Price,Seat_Row,Section,Seat_Column,Type,CustomerID) VALUES (15,6,5,809.06,705,'3E',48,'Normal',14);
+
+INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (1,'Sandro','Engeham','502-782-5734','sengeham0@wiley.com','0 Forest Dale Way','Louisville','KY',59179,'US','4','Emergency Contact');
+INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (2,'Eal','Wallhead','805-498-4138','ewallhead1@wikipedia.org','96820 Gulseth Hill','San Mateo','CA',23258,'US','7','Friend');
+INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (3,'Zola','Insull','702-584-7775','zinsull2@walmart.com','71326 Kensington Circle','Las Vegas','NV',88329,'US','1','Friend');
+INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (4,'Jaquelin','Pedlingham','952-560-8759','jpedlingham3@spiegel.de','00525 Mandrake Way','Young America','MN',28438,'US','11','Cousin');
+INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (5,'Torin','Pelham','407-104-9062','tpelham4@sogou.com','4 Eagle Crest Center','Orlando','FL',65002,'US','12','Friend');
+INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (6,'Isadora','Doughartie','602-219-7497','idoughartie5@yellowpages.com','14 Sloan Pass','Phoenix','AZ',84852,'US','13','Friend');
+INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (7,'Preston','Reagan','540-515-4435','preagan6@reference.com','08 Union Parkway','Roanoke','VA',29782,'US','4','Friend');
+INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (8,'Harper','Longworth','803-576-9090','hlongworth7@fotki.com','8784 Hanover Way','Columbia','SC',82034,'US','14','Friend');
+INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (9,'Flossie','Le Gallo','415-143-9191','flegallo8@i2i.jp','1749 Trailsway Point','San Francisco','CA',38623,'US','11','Friend');
+INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (10,'Thelma','Heinke','716-220-8216','theinke9@howstuffworks.com','8487 Sugar Alley','Buffalo','NY',86674,'US','3','Friend');
+INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (11,'Annie','Rubrow','318-251-5311','arubrowa@yale.edu','7 Dixon Court','Shreveport','LA',69721,'US','10','Friend');
+INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (12,'Franny','Syncke','202-146-8272','fsynckeb@theguardian.com','73106 Red Cloud Street','Washington','DC',21839,'US','3','Friend');
+INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (13,'Laurie','Shay','916-290-1034','lshayc@networksolutions.com','8673 Union Center','Sacramento','CA',59336,'US','14','Sister');
+INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (14,'Terri-jo','Coggon','716-210-2638','tcoggond@hugedomains.com','6 Manley Court','Buffalo','NY',89631,'US','15','Friend');
+INSERT INTO Dependent(DependentID,FirstName,LastName,PhoneNumber,Email,Street,City,State,Zipcode,Country,Parent,Relationship) VALUES (15,'Elnore','Garnett','336-290-5828','egarnette@webnode.com','20 Basil Street','Greensboro','NC',50032,'US','3','Friend');
 
 INSERT INTO Genre(Name) VALUES ('Hip-Hop');
 INSERT INTO Genre(Name) VALUES ('Rap');
