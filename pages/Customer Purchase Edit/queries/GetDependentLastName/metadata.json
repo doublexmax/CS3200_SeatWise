@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "GetPerformances",
+    "name": "GetDependentLastName",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/v/venues/{{VenueSelect.selectedOptionValue}}/performances"
+        "url": "Web:4000/c/customers/dependent/{{Select2.selectedOptionValue}}/lastname"
       },
       "invalids": [],
       "messages": [],
@@ -46,14 +46,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "VenueSelect.selectedOptionValue"
+      "Select2.selectedOptionValue"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Customer Purchase Edit_GetPerformances",
+  "id": "Customer Purchase Edit_GetDependentLastName",
   "deleted": false,
-  "gitSyncId": "643d92aac340f25a090c99fe_643d9588c340f25a090c9a18"
+  "gitSyncId": "643da0da5e27e22d2482df93_643db9875e27e22d2482dff2"
 }
