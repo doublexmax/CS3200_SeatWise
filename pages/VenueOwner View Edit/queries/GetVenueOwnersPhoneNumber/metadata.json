@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "GetVenues",
+    "name": "GetVenueOwnersPhoneNumber",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/v/venues/form"
+        "url": "web:4000/vo/venue_owner/{{VenueOwnerCopy.selectedOptionValue}}/phonenumber"
       },
       "invalids": [],
       "messages": [],
@@ -16,7 +16,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Customer Purchase Edit",
+    "pageId": "VenueOwner View Edit",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -38,17 +38,23 @@
       }
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "datasourceUrl"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "VenueOwnerCopy.selectedOptionValue"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Customer Purchase Edit_GetVenues",
+  "id": "VenueOwner View Edit_GetVenueOwnersPhoneNumber",
   "deleted": false,
-  "gitSyncId": "643d92aac340f25a090c99fe_643d95c2c340f25a090c9a1a"
+  "gitSyncId": "643c811511561352f302b6b4_643da4eefaa2b0183e4b5285"
 }
