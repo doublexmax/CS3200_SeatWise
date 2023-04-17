@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "GetVenues",
+    "name": "GetVenuesPhoneNumber",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/vo/venues/{{VenueOwner.selectedOptionValue}}"
+        "url": "web:4000/v/venues/{{VenueOwner.selectedOptionValue}}/phonenumber"
       },
       "invalids": [],
       "messages": [],
@@ -53,7 +53,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "VenueOwner View Edit_GetVenues",
+  "id": "VenueOwner View Edit_GetVenuesPhoneNumber",
   "deleted": false,
-  "gitSyncId": "643c4fb6d150084443869939_643c5e6c58f62009a26eb1c2"
+  "gitSyncId": "643c811511561352f302b6b4_643dba78faa2b0183e4b52a5"
 }
