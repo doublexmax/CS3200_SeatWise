@@ -2500,7 +2500,7 @@
                       "originalTopRow": 13,
                       "maxDynamicHeight": 9000,
                       "iconAlign": "left",
-                      "defaultText": "{{GetCustomersFirstName.data}}",
+                      "defaultText": "{{GetCustomersFirstName.data[0].FirstName}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -2562,7 +2562,7 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
                       "iconAlign": "left",
-                      "defaultText": "{{GetCustomersLastName.data}}",
+                      "defaultText": "{{GetCustomersLastName.data[0].LastName}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -2624,7 +2624,7 @@
                       "originalTopRow": 21,
                       "maxDynamicHeight": 9000,
                       "iconAlign": "left",
-                      "defaultText": "{{GetCustomerPhone.data}}",
+                      "defaultText": "{{GetCustomerPhone.data[0].PhoneNumber}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -2688,7 +2688,7 @@
                       "maxDynamicHeight": 9000,
                       "originalBottomRow": 36,
                       "iconAlign": "left",
-                      "defaultText": "{{GetCustomerEmail.data}}",
+                      "defaultText": "{{GetCustomerEmail.data[0].Email}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -3532,26 +3532,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Customer Purchase Edit_GetCustomerEmail",
-              "name": "GetCustomerEmail",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "Select2Copy.selectedOptionValue"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Customer Purchase Edit_GetCustomerPhone",
-              "name": "GetCustomerPhone",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "Select2Copy.selectedOptionValue"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
               "id": "Customer Purchase Edit_GetCustomerTicket",
               "name": "GetCustomerTicket",
               "confirmBeforeExecute": false,
@@ -3569,6 +3549,26 @@
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             },
+            {
+              "id": "Customer Purchase Edit_GetPerformances",
+              "name": "GetPerformances",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "VenueSelect.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Customer Purchase Edit_GetVenues",
+              "name": "GetVenues",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
             {
               "id": "Customer Purchase Edit_GetCustomersFirstName",
               "name": "GetCustomersFirstName",
@@ -3588,23 +3588,27 @@
                 "Select2Copy.selectedOptionValue"
               ],
               "timeoutInMillisecond": 10000
-            },
+            }
+          ],
+          [
             {
-              "id": "Customer Purchase Edit_GetPerformances",
-              "name": "GetPerformances",
+              "id": "Customer Purchase Edit_GetCustomerEmail",
+              "name": "GetCustomerEmail",
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
-                "VenueSelect.selectedOptionValue"
+                "Select2Copy.selectedOptionValue"
               ],
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Customer Purchase Edit_GetVenues",
-              "name": "GetVenues",
+              "id": "Customer Purchase Edit_GetCustomerPhone",
+              "name": "GetCustomerPhone",
               "confirmBeforeExecute": false,
               "pluginType": "API",
-              "jsonPathKeys": [],
+              "jsonPathKeys": [
+                "Select2Copy.selectedOptionValue"
+              ],
               "timeoutInMillisecond": 10000
             }
           ]
