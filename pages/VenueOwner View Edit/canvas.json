@@ -94,6 +94,9 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "defaultText"
                         }
                       ],
                       "labelPosition": "Top",
@@ -121,7 +124,7 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
                       "iconAlign": "left",
-                      "defaultText": "",
+                      "defaultText": "{{GetVenuesPhoneNumber.data[0].PhoneNumber}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -209,6 +212,9 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "defaultText"
                         }
                       ],
                       "labelPosition": "Top",
@@ -238,7 +244,7 @@
                       "maxDynamicHeight": 9000,
                       "originalBottomRow": 35,
                       "iconAlign": "left",
-                      "defaultText": "",
+                      "defaultText": "{{GetVenuesStreet.data[0].Street}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -270,6 +276,9 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "defaultText"
                         }
                       ],
                       "labelPosition": "Top",
@@ -299,7 +308,7 @@
                       "maxDynamicHeight": 9000,
                       "originalBottomRow": 42,
                       "iconAlign": "left",
-                      "defaultText": "",
+                      "defaultText": "{{GetVenuesCity.data[0].City}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -331,6 +340,9 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "defaultText"
                         }
                       ],
                       "labelPosition": "Top",
@@ -360,7 +372,7 @@
                       "maxDynamicHeight": 9000,
                       "originalBottomRow": 42,
                       "iconAlign": "left",
-                      "defaultText": "",
+                      "defaultText": "{{GetVenuesState.data[0].State}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -392,6 +404,9 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "defaultText"
                         }
                       ],
                       "labelPosition": "Top",
@@ -421,7 +436,7 @@
                       "maxDynamicHeight": 9000,
                       "originalBottomRow": 49,
                       "iconAlign": "left",
-                      "defaultText": "",
+                      "defaultText": "{{GetVenuesZipCode.data[0].Zipcode}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -453,6 +468,9 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "defaultText"
                         }
                       ],
                       "labelPosition": "Top",
@@ -482,7 +500,7 @@
                       "maxDynamicHeight": 9000,
                       "originalBottomRow": 49,
                       "iconAlign": "left",
-                      "defaultText": "",
+                      "defaultText": "{{GetVenuesCountry.data[0].Country}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -541,6 +559,7 @@
                       "resetFormOnClick": true,
                       "boxShadow": "none",
                       "widgetName": "Button7",
+                      "onClick": "{{PutVenues.run(() => showAlert('Success!','success'), () => showAlert('Try Edit Again!','error'))}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
@@ -553,7 +572,11 @@
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 47,
                       "dynamicBindingPathList": [
                         {
@@ -659,6 +682,9 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "defaultText"
                         }
                       ],
                       "labelPosition": "Top",
@@ -686,7 +712,7 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
                       "iconAlign": "left",
-                      "defaultText": "",
+                      "defaultText": "{{GetVenuesEmail.data[0].Email}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -709,7 +735,11 @@
                       "defaultOptionValue": "GREEN",
                       "animateLoading": true,
                       "parentColumnSpace": 12.51953125,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onOptionChange"
+                        }
+                      ],
                       "leftColumn": 2,
                       "dynamicBindingPathList": [
                         {
@@ -717,23 +747,13 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "options"
                         }
                       ],
                       "labelPosition": "Top",
-                      "options": [
-                        {
-                          "label": "Blue",
-                          "value": "BLUE"
-                        },
-                        {
-                          "label": "Green",
-                          "value": "GREEN"
-                        },
-                        {
-                          "label": "Red",
-                          "value": "RED"
-                        }
-                      ],
+                      "options": "{{GetVenues.data}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "qcg5s9s53i",
@@ -754,6 +774,7 @@
                       "responsiveBehavior": "fill",
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
+                      "onOptionChange": "{{JSObject4.myFun1()}}",
                       "minDynamicHeight": 4
                     }
                   ],
@@ -2559,6 +2580,76 @@
               "pluginType": "API",
               "jsonPathKeys": [
                 "VenueOwnerCopy.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "VenueOwner View Edit_GetVenuesCity",
+              "name": "GetVenuesCity",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "VenueOwner.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "VenueOwner View Edit_GetVenuesCountry",
+              "name": "GetVenuesCountry",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "VenueOwner.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "VenueOwner View Edit_GetVenuesEmail",
+              "name": "GetVenuesEmail",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "VenueOwner.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "VenueOwner View Edit_GetVenuesPhoneNumber",
+              "name": "GetVenuesPhoneNumber",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "VenueOwner.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "VenueOwner View Edit_GetVenuesState",
+              "name": "GetVenuesState",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "VenueOwner.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "VenueOwner View Edit_GetVenuesStreet",
+              "name": "GetVenuesStreet",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "VenueOwner.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "VenueOwner View Edit_GetVenuesZipCode",
+              "name": "GetVenuesZipCode",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "VenueOwner.selectedOptionValue"
               ],
               "timeoutInMillisecond": 10000
             }

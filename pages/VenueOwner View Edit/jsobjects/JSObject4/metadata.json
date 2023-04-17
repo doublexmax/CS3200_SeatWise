@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "JSObject4",
+    "pageId": "VenueOwner View Edit",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "VenueOwner View Edit_JSObject4",
+  "deleted": false,
+  "gitSyncId": "643c811511561352f302b6b4_643dbdadfaa2b0183e4b52bb"
+}
