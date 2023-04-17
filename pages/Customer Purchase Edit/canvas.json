@@ -1651,6 +1651,9 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "defaultText"
                         }
                       ],
                       "labelPosition": "Top",
@@ -1680,7 +1683,7 @@
                       "maxDynamicHeight": 9000,
                       "originalBottomRow": 29,
                       "iconAlign": "left",
-                      "defaultText": "",
+                      "defaultText": "{{GetCustomersFirstName.data}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -1712,6 +1715,9 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "defaultText"
                         }
                       ],
                       "labelPosition": "Top",
@@ -1741,7 +1747,7 @@
                       "maxDynamicHeight": 9000,
                       "originalBottomRow": 21,
                       "iconAlign": "left",
-                      "defaultText": "",
+                      "defaultText": "{{GetCustomersLastName.data}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -2301,7 +2307,11 @@
                       "defaultOptionValue": "GREEN",
                       "animateLoading": true,
                       "parentColumnSpace": 10.1669921875,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onOptionChange"
+                        }
+                      ],
                       "leftColumn": 2,
                       "dynamicBindingPathList": [
                         {
@@ -2309,23 +2319,17 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "labelTooltip"
+                        },
+                        {
+                          "key": "options"
                         }
                       ],
                       "labelPosition": "Top",
-                      "options": [
-                        {
-                          "label": "Blue",
-                          "value": "BLUE"
-                        },
-                        {
-                          "label": "Green",
-                          "value": "GREEN"
-                        },
-                        {
-                          "label": "Red",
-                          "value": "RED"
-                        }
-                      ],
+                      "labelTooltip": "{{GetCustomers.data}}",
+                      "options": "{{GetCustomers.data}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "qcg5s9s53i",
@@ -2348,6 +2352,7 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
                       "originalBottomRow": 17,
+                      "onOptionChange": "{{JSObject1.myFun2()}}",
                       "minDynamicHeight": 4
                     }
                   ],
@@ -2431,25 +2436,11 @@
                   "children": [
                     {
                       "boxShadow": "none",
-                      "widgetName": "VOFirstNameCopy",
-                      "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
-                      "searchTags": [
-                        "form",
-                        "text input",
-                        "number",
-                        "textarea"
-                      ],
                       "topRow": 16,
-                      "bottomRow": 23,
-                      "parentRowSpace": 10,
                       "labelWidth": 5,
-                      "autoFocus": false,
                       "type": "INPUT_WIDGET_V2",
-                      "hideCard": false,
                       "animateLoading": true,
-                      "parentColumnSpace": 11.8779296875,
-                      "dynamicTriggerPathList": [],
                       "resetOnSubmit": true,
                       "leftColumn": 2,
                       "dynamicBindingPathList": [
@@ -2458,36 +2449,58 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "defaultText"
                         }
                       ],
-                      "labelPosition": "Top",
                       "labelStyle": "",
                       "inputType": "TEXT",
                       "isDisabled": false,
-                      "key": "trm00toie1",
-                      "labelTextSize": "0.875rem",
                       "isRequired": false,
-                      "isDeprecated": false,
-                      "rightColumn": 22,
                       "dynamicHeight": "FIXED",
-                      "widgetId": "t119vuo18k",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "showStepArrows": false,
-                      "minWidth": 450,
                       "isVisible": true,
-                      "label": "First Name",
                       "version": 2,
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "originalBottomRow": 20,
+                      "widgetName": "VOFirstNameCopy",
+                      "displayName": "Input",
+                      "searchTags": [
+                        "form",
+                        "text input",
+                        "number",
+                        "textarea"
+                      ],
+                      "bottomRow": 23,
+                      "parentRowSpace": 10,
+                      "autoFocus": false,
+                      "hideCard": false,
+                      "parentColumnSpace": 11.8779296875,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onTextChanged"
+                        }
+                      ],
+                      "labelPosition": "Top",
+                      "key": "trm00toie1",
+                      "labelTextSize": "0.875rem",
+                      "onTextChanged": "{{JSObject1.myFun2()}}",
+                      "isDeprecated": false,
+                      "rightColumn": 22,
+                      "widgetId": "t119vuo18k",
+                      "minWidth": 450,
+                      "label": "First Name",
                       "parentId": "zfro9co8jz",
                       "labelAlignment": "left",
                       "renderMode": "CANVAS",
-                      "isLoading": false,
                       "responsiveBehavior": "fill",
                       "originalTopRow": 13,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
-                      "originalBottomRow": 20,
                       "iconAlign": "left",
-                      "defaultText": "",
+                      "defaultText": "{{GetCustomersFirstName.data}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -2519,6 +2532,9 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "defaultText"
                         }
                       ],
                       "labelPosition": "Top",
@@ -2546,7 +2562,7 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
                       "iconAlign": "left",
-                      "defaultText": "",
+                      "defaultText": "{{GetCustomersLastName.data}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -2564,6 +2580,9 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "defaultText"
                         }
                       ],
                       "labelStyle": "",
@@ -2592,7 +2611,7 @@
                       "key": "8kt64r30h6",
                       "labelTextSize": "0.875rem",
                       "isDeprecated": false,
-                      "rightColumn": 22,
+                      "rightColumn": 44,
                       "widgetId": "xt0sufq88c",
                       "allowDialCodeChange": false,
                       "minWidth": 450,
@@ -2605,7 +2624,7 @@
                       "originalTopRow": 21,
                       "maxDynamicHeight": 9000,
                       "iconAlign": "left",
-                      "defaultText": "",
+                      "defaultText": "{{GetCustomerPhone.data}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -2637,6 +2656,9 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "defaultText"
                         }
                       ],
                       "labelPosition": "Top",
@@ -2666,7 +2688,7 @@
                       "maxDynamicHeight": 9000,
                       "originalBottomRow": 36,
                       "iconAlign": "left",
-                      "defaultText": "",
+                      "defaultText": "{{GetCustomerEmail.data}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -2686,10 +2708,14 @@
                       "type": "SELECT_WIDGET",
                       "serverSideFiltering": false,
                       "hideCard": false,
-                      "defaultOptionValue": "GREEN",
+                      "defaultOptionValue": "",
                       "animateLoading": true,
                       "parentColumnSpace": 10.1669921875,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onOptionChange"
+                        }
+                      ],
                       "leftColumn": 2,
                       "dynamicBindingPathList": [
                         {
@@ -2697,23 +2723,13 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "options"
                         }
                       ],
                       "labelPosition": "Top",
-                      "options": [
-                        {
-                          "label": "Blue",
-                          "value": "BLUE"
-                        },
-                        {
-                          "label": "Green",
-                          "value": "GREEN"
-                        },
-                        {
-                          "label": "Red",
-                          "value": "RED"
-                        }
-                      ],
+                      "options": "{{GetCustomers.data}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "qcg5s9s53i",
@@ -2736,6 +2752,7 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
                       "originalBottomRow": 17,
+                      "onOptionChange": "{{JSObject1.myFun1()}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -3515,6 +3532,26 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "Customer Purchase Edit_GetCustomerEmail",
+              "name": "GetCustomerEmail",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "Select2Copy.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Customer Purchase Edit_GetCustomerPhone",
+              "name": "GetCustomerPhone",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "Select2Copy.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Customer Purchase Edit_GetCustomerTicket",
               "name": "GetCustomerTicket",
               "confirmBeforeExecute": false,
@@ -3530,6 +3567,26 @@
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Customer Purchase Edit_GetCustomersFirstName",
+              "name": "GetCustomersFirstName",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "Select2Copy.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Customer Purchase Edit_GetCustomersLastName",
+              "name": "GetCustomersLastName",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "Select2Copy.selectedOptionValue"
+              ],
               "timeoutInMillisecond": 10000
             },
             {

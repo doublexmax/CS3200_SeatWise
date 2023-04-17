@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "GetCustomers",
+    "name": "GetCustomerPhone",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/c/customers/names"
+        "url": "web:4000/c/customers/{{Select2Copy.selectedOptionValue}}/phone_no"
       },
       "invalids": [],
       "messages": [],
@@ -37,17 +37,23 @@
       }
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "datasourceUrl"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "Select2Copy.selectedOptionValue"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Customer Purchase Edit_GetCustomers",
+  "id": "Customer Purchase Edit_GetCustomerPhone",
   "deleted": false,
-  "gitSyncId": "643c4c68d150084443869907_643d8914c340f25a090c99e6"
+  "gitSyncId": "643da0da5e27e22d2482df93_643da7a15e27e22d2482dfca"
 }

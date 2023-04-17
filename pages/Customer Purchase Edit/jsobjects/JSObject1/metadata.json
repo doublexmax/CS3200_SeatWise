@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "JSObject1",
+    "pageId": "Customer Purchase Edit",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Customer Purchase Edit_JSObject1",
+  "deleted": false,
+  "gitSyncId": "643da0da5e27e22d2482df93_643da7e85e27e22d2482dfd2"
+}
