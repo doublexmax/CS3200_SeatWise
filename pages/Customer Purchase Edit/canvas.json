@@ -722,8 +722,8 @@
                         "paragraph",
                         "label"
                       ],
-                      "topRow": 39,
-                      "bottomRow": 43,
+                      "topRow": 33,
+                      "bottomRow": 37,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -892,7 +892,7 @@
                     {
                       "boxShadow": "none",
                       "iconSVG": "/static/media/icon.108789d7165de30306435ab3c24e6cad.svg",
-                      "topRow": 21,
+                      "topRow": 19,
                       "labelWidth": 5,
                       "type": "PHONE_INPUT_WIDGET",
                       "animateLoading": true,
@@ -921,7 +921,7 @@
                       "searchTags": [
                         "call"
                       ],
-                      "bottomRow": 28,
+                      "bottomRow": 26,
                       "parentRowSpace": 10,
                       "defaultDialCode": "+1",
                       "autoFocus": false,
@@ -959,8 +959,8 @@
                         "number",
                         "textarea"
                       ],
-                      "topRow": 30,
-                      "bottomRow": 37,
+                      "topRow": 26,
+                      "bottomRow": 33,
                       "parentRowSpace": 10,
                       "labelWidth": 5,
                       "autoFocus": false,
@@ -1155,7 +1155,7 @@
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "Select1",
+                      "widgetName": "PerformanceSelect",
                       "isFilterable": true,
                       "displayName": "Select",
                       "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
@@ -1170,7 +1170,7 @@
                       "type": "SELECT_WIDGET",
                       "serverSideFiltering": false,
                       "hideCard": false,
-                      "defaultOptionValue": "GREEN",
+                      "defaultOptionValue": "",
                       "animateLoading": true,
                       "parentColumnSpace": 10.1669921875,
                       "dynamicTriggerPathList": [],
@@ -1181,23 +1181,13 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "options"
                         }
                       ],
                       "labelPosition": "Top",
-                      "options": [
-                        {
-                          "label": "Blue",
-                          "value": "BLUE"
-                        },
-                        {
-                          "label": "Green",
-                          "value": "GREEN"
-                        },
-                        {
-                          "label": "Red",
-                          "value": "RED"
-                        }
-                      ],
+                      "options": "{{GetPerformances.data}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "qcg5s9s53i",
@@ -1337,6 +1327,71 @@
                       "maxDynamicHeight": 9000,
                       "originalBottomRow": 59,
                       "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "VenueSelect",
+                      "isFilterable": true,
+                      "displayName": "Select",
+                      "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
+                      "labelText": "Please choose the venue",
+                      "searchTags": [
+                        "dropdown"
+                      ],
+                      "topRow": 37,
+                      "bottomRow": 44,
+                      "parentRowSpace": 10,
+                      "labelWidth": 5,
+                      "type": "SELECT_WIDGET",
+                      "serverSideFiltering": false,
+                      "hideCard": false,
+                      "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( `1`))(VenueSelect.options, VenueSelect.serverSideFiltering) }}",
+                      "animateLoading": true,
+                      "parentColumnSpace": 15.0478515625,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onOptionChange"
+                        }
+                      ],
+                      "leftColumn": 2,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        },
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "options"
+                        },
+                        {
+                          "key": "defaultOptionValue"
+                        }
+                      ],
+                      "labelPosition": "Top",
+                      "options": "{{GetVenues.data}}",
+                      "placeholderText": "Select option",
+                      "isDisabled": false,
+                      "key": "c6569gy1pe",
+                      "labelTextSize": "0.875rem",
+                      "isRequired": false,
+                      "isDeprecated": false,
+                      "rightColumn": 22,
+                      "dynamicHeight": "FIXED",
+                      "widgetId": "hskbnch6t3",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "minWidth": 450,
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "kty9n17r26",
+                      "labelAlignment": "left",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "responsiveBehavior": "fill",
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "maxDynamicHeight": 9000,
+                      "onOptionChange": "{{GetPerformances.run()}}",
                       "minDynamicHeight": 4
                     }
                   ],
@@ -2922,7 +2977,7 @@
                       "type": "SELECT_WIDGET",
                       "serverSideFiltering": false,
                       "hideCard": false,
-                      "defaultOptionValue": "GREEN",
+                      "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( `1`))(ChooseUserViewTick.options, ChooseUserViewTick.serverSideFiltering) }}",
                       "animateLoading": true,
                       "parentColumnSpace": 10.1669921875,
                       "dynamicTriggerPathList": [
@@ -2940,6 +2995,9 @@
                         },
                         {
                           "key": "options"
+                        },
+                        {
+                          "key": "defaultOptionValue"
                         }
                       ],
                       "labelPosition": "Top",
@@ -3469,6 +3527,24 @@
             {
               "id": "Customer Purchase Edit_GetCustomers",
               "name": "GetCustomers",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Customer Purchase Edit_GetPerformances",
+              "name": "GetPerformances",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "VenueSelect.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Customer Purchase Edit_GetVenues",
+              "name": "GetVenues",
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [],
