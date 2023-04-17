@@ -7,7 +7,8 @@
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/vo/venue_owner/name"
+        "url": "web:4000/vo/venue_owner/name",
+        "headers": []
       },
       "invalids": [],
       "messages": [],
