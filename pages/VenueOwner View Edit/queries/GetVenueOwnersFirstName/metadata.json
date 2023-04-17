@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "GetRevenue",
+    "name": "GetVenueOwnersFirstName",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/v/venues/{{SelectVenue.selectedOptionValue}}/revenue"
+        "url": "web:4000/vo/venue_owner/{{VenueOwnerCopy.selectedOptionValue}}/firstname"
       },
       "invalids": [],
       "messages": [],
@@ -46,14 +46,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "SelectVenue.selectedOptionValue"
+      "VenueOwnerCopy.selectedOptionValue"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "VenueOwner View Edit_GetRevenue",
+  "id": "VenueOwner View Edit_GetVenueOwnersFirstName",
   "deleted": false,
-  "gitSyncId": "643c4fb6d150084443869939_643c52ead15008444386994d"
+  "gitSyncId": "643c811511561352f302b6b4_643da0b7faa2b0183e4b5277"
 }
