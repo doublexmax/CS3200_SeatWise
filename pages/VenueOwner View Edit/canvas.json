@@ -124,7 +124,7 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
                       "iconAlign": "left",
-                      "defaultText": "{{GetVenuesPhoneNumber.data[0].PhoneNumber}}",
+                      "defaultText": "{{GetVenueInfo.data[0].PhoneNumber}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -244,7 +244,7 @@
                       "maxDynamicHeight": 9000,
                       "originalBottomRow": 35,
                       "iconAlign": "left",
-                      "defaultText": "{{GetVenuesStreet.data[0].Street}}",
+                      "defaultText": "{{GetVenueInfo.data[0].Street}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -308,7 +308,7 @@
                       "maxDynamicHeight": 9000,
                       "originalBottomRow": 42,
                       "iconAlign": "left",
-                      "defaultText": "{{GetVenuesCity.data[0].City}}",
+                      "defaultText": "{{GetVenueInfo.data[0].City}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -372,7 +372,7 @@
                       "maxDynamicHeight": 9000,
                       "originalBottomRow": 42,
                       "iconAlign": "left",
-                      "defaultText": "{{GetVenuesState.data[0].State}}",
+                      "defaultText": "{{GetVenueInfo.data[0].State}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -436,7 +436,7 @@
                       "maxDynamicHeight": 9000,
                       "originalBottomRow": 49,
                       "iconAlign": "left",
-                      "defaultText": "{{GetVenuesZipCode.data[0].Zipcode}}",
+                      "defaultText": "{{GetVenueInfo.data[0].Zipcode}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -500,7 +500,7 @@
                       "maxDynamicHeight": 9000,
                       "originalBottomRow": 49,
                       "iconAlign": "left",
-                      "defaultText": "{{GetVenuesCountry.data[0].Country}}",
+                      "defaultText": "{{GetVenueInfo.data[0].Country}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -712,7 +712,7 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
                       "iconAlign": "left",
-                      "defaultText": "{{GetVenuesEmail.data[0].Email}}",
+                      "defaultText": "{{GetVenueInfo.data[0].Email}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -2063,7 +2063,7 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
                       "iconAlign": "left",
-                      "defaultText": "{{GetVenueOwnersFirstName.data[0].FirstName}}",
+                      "defaultText": "{{GetVenueOwnersInfo.data[0].FirstName}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -2125,7 +2125,7 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
                       "iconAlign": "left",
-                      "defaultText": "{{GetVenueOwnersLastName.data[0].LastName}}",
+                      "defaultText": "{{GetVenueOwnersInfo.data[0].LastName}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -2185,7 +2185,7 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
                       "iconAlign": "left",
-                      "defaultText": "{{GetVenueOwnersPhoneNumber.data[0].PhoneNumber}}",
+                      "defaultText": "{{GetVenueOwnersInfo.data[0].PhoneNumber}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -2247,7 +2247,7 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
                       "iconAlign": "left",
-                      "defaultText": "{{GetVenueOwnersEmail.data[0].Email}}",
+                      "defaultText": "{{GetVenueOwnersInfo.data[0].Email}}",
                       "minDynamicHeight": 4
                     },
                     {
@@ -2544,112 +2544,22 @@
           ],
           [
             {
-              "id": "VenueOwner View Edit_GetVenueOwnersEmail",
-              "name": "GetVenueOwnersEmail",
+              "id": "VenueOwner View Edit_GetVenueInfo",
+              "name": "GetVenueInfo",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "VenueOwner.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "VenueOwner View Edit_GetVenueOwnersInfo",
+              "name": "GetVenueOwnersInfo",
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
                 "VenueOwnerCopy.selectedOptionValue"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "VenueOwner View Edit_GetVenueOwnersFirstName",
-              "name": "GetVenueOwnersFirstName",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "VenueOwnerCopy.selectedOptionValue"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "VenueOwner View Edit_GetVenueOwnersLastName",
-              "name": "GetVenueOwnersLastName",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "VenueOwnerCopy.selectedOptionValue"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "VenueOwner View Edit_GetVenueOwnersPhoneNumber",
-              "name": "GetVenueOwnersPhoneNumber",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "VenueOwnerCopy.selectedOptionValue"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "VenueOwner View Edit_GetVenuesCity",
-              "name": "GetVenuesCity",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "VenueOwner.selectedOptionValue"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "VenueOwner View Edit_GetVenuesCountry",
-              "name": "GetVenuesCountry",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "VenueOwner.selectedOptionValue"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "VenueOwner View Edit_GetVenuesEmail",
-              "name": "GetVenuesEmail",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "VenueOwner.selectedOptionValue"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "VenueOwner View Edit_GetVenuesPhoneNumber",
-              "name": "GetVenuesPhoneNumber",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "VenueOwner.selectedOptionValue"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "VenueOwner View Edit_GetVenuesState",
-              "name": "GetVenuesState",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "VenueOwner.selectedOptionValue"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "VenueOwner View Edit_GetVenuesStreet",
-              "name": "GetVenuesStreet",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "VenueOwner.selectedOptionValue"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "VenueOwner View Edit_GetVenuesZipCode",
-              "name": "GetVenuesZipCode",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "VenueOwner.selectedOptionValue"
               ],
               "timeoutInMillisecond": 10000
             }

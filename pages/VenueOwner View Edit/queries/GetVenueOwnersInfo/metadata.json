@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "GetVenueOwnersFirstName",
+    "name": "GetVenueOwnersInfo",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/vo/venue_owner/{{VenueOwnerCopy.selectedOptionValue}}/firstname"
+        "url": "web:4000/vo/venue_owner/{{VenueOwnerCopy.selectedOptionValue}}/info"
       },
       "invalids": [],
       "messages": [],
@@ -53,7 +53,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "VenueOwner View Edit_GetVenueOwnersFirstName",
+  "id": "VenueOwner View Edit_GetVenueOwnersInfo",
   "deleted": false,
-  "gitSyncId": "643c811511561352f302b6b4_643da0b7faa2b0183e4b5277"
+  "gitSyncId": "643c811511561352f302b6b4_643dc0e0faa2b0183e4b52d9"
 }
