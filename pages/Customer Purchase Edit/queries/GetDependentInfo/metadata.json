@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "GetDependentFirstName",
+    "name": "GetDependentInfo",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "Web:4000/c/customers/dependent/{{Select2.selectedOptionValue}}/firstname"
+        "url": "Web:4000/c/customers/dependent/{{Select2.selectedOptionValue}}/info"
       },
       "invalids": [],
       "messages": [],
@@ -53,7 +53,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Customer Purchase Edit_GetDependentFirstName",
+  "id": "Customer Purchase Edit_GetDependentInfo",
   "deleted": false,
-  "gitSyncId": "643da0da5e27e22d2482df93_643db6205e27e22d2482dfed"
+  "gitSyncId": "643da0da5e27e22d2482df93_643db9875e27e22d2482dff2"
 }
