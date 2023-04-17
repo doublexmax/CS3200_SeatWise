@@ -23,6 +23,7 @@
       "headers": [],
       "encodeParamsToggle": true,
       "queryParameters": [],
+      "body": "",
       "bodyFormData": [],
       "httpMethod": "GET",
       "selfReferencingDataPaths": [],
