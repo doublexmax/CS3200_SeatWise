@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 3410,
+          "bottomRow": 3360,
           "containerStyle": "none",
           "snapRows": 69,
           "parentRowSpace": 1,
@@ -390,7 +390,7 @@
                 "group"
               ],
               "topRow": 311,
-              "bottomRow": 341,
+              "bottomRow": 336,
               "parentRowSpace": 10,
               "type": "FORM_WIDGET",
               "hideCard": false,
@@ -411,7 +411,7 @@
                   "widgetName": "Canvas5Copy",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 300,
+                  "bottomRow": 250,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -423,7 +423,7 @@
                   "children": [
                     {
                       "boxShadow": "none",
-                      "widgetName": "DeleteUsername",
+                      "widgetName": "ChooseUserToDelete",
                       "isFilterable": true,
                       "displayName": "Select",
                       "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
@@ -438,7 +438,7 @@
                       "type": "SELECT_WIDGET",
                       "serverSideFiltering": false,
                       "hideCard": false,
-                      "defaultOptionValue": "GREEN",
+                      "defaultOptionValue": "",
                       "animateLoading": true,
                       "parentColumnSpace": 10.1669921875,
                       "dynamicTriggerPathList": [],
@@ -449,23 +449,13 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "options"
                         }
                       ],
                       "labelPosition": "Top",
-                      "options": [
-                        {
-                          "label": "Blue",
-                          "value": "BLUE"
-                        },
-                        {
-                          "label": "Green",
-                          "value": "GREEN"
-                        },
-                        {
-                          "label": "Red",
-                          "value": "RED"
-                        }
-                      ],
+                      "options": "{{GetCustomers.data}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "qcg5s9s53i",
@@ -547,7 +537,8 @@
                     {
                       "resetFormOnClick": true,
                       "boxShadow": "none",
-                      "widgetName": "Button9Copy",
+                      "widgetName": "DeleteAccountButton",
+                      "onClick": "{{RemoveAccount.run(() => showAlert('Successfully removed your account','success'), () => showAlert('Failed to remove your account','error'))}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
@@ -555,12 +546,16 @@
                         "click",
                         "submit"
                       ],
-                      "topRow": 24,
-                      "bottomRow": 28,
+                      "topRow": 19,
+                      "bottomRow": 23,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 29,
                       "dynamicBindingPathList": [
                         {
@@ -601,8 +596,8 @@
                         "click",
                         "submit"
                       ],
-                      "topRow": 24,
-                      "bottomRow": 28,
+                      "topRow": 19,
+                      "bottomRow": 23,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
@@ -671,7 +666,7 @@
               "originalTopRow": 311,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 341,
+              "originalBottomRow": 337,
               "minDynamicHeight": 10
             },
             {
