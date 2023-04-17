@@ -1,7 +1,7 @@
 export default {
 	myFun2: () => {
 		{{GetDependentFirstName.run()}}
-		{{GetDependentLastName.run()}}
+		{{GetDependentInfo.run()}}
 		{{GetDependentsPhoneNumber.run()}}
 		{{GetDependentRelationship.run()}}
 		{{GetDependentStreet.run()}}

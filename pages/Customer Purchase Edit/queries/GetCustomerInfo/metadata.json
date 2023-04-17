@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "GetDependentsCity",
+    "name": "GetCustomerInfo",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "Web:4000/c/customers/dependent/{{Select2.selectedOptionValue}}/city"
+        "url": "web:4000/c/customers/{{Select2Copy.selectedOptionValue}}/info"
       },
       "invalids": [],
       "messages": [],
@@ -46,14 +46,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Select2.selectedOptionValue"
+      "Select2Copy.selectedOptionValue"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Customer Purchase Edit_GetDependentsCity",
+  "id": "Customer Purchase Edit_GetCustomerInfo",
   "deleted": false,
-  "gitSyncId": "643da0da5e27e22d2482df93_643dbc855e27e22d2482dffd"
+  "gitSyncId": "643da0da5e27e22d2482df93_643dc27a5e27e22d2482e021"
 }
