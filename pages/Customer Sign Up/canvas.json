@@ -2071,11 +2071,11 @@
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "MultiSelect1",
+                      "widgetName": "ChooseArtists",
                       "isFilterable": true,
                       "displayName": "MultiSelect",
                       "iconSVG": "/static/media/icon.a3495809ae48291a64404f3bb04b0e69.svg",
-                      "labelText": "Please choose 5 of the following artists",
+                      "labelText": "Please choose any of the following artists",
                       "searchTags": [
                         "dropdown",
                         "tags"
@@ -2087,10 +2087,7 @@
                       "type": "MULTI_SELECT_WIDGET_V2",
                       "serverSideFiltering": false,
                       "hideCard": false,
-                      "defaultOptionValue": [
-                        "GREEN",
-                        "RED"
-                      ],
+                      "defaultOptionValue": "",
                       "animateLoading": true,
                       "parentColumnSpace": 11.0224609375,
                       "dynamicTriggerPathList": [],
@@ -2101,30 +2098,20 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "options"
                         }
                       ],
                       "labelPosition": "Top",
-                      "options": [
-                        {
-                          "label": "Blue",
-                          "value": "BLUE"
-                        },
-                        {
-                          "label": "Green",
-                          "value": "GREEN"
-                        },
-                        {
-                          "label": "Red",
-                          "value": "RED"
-                        }
-                      ],
+                      "options": "{{GetArtistName.data}}",
                       "placeholderText": "Select option(s)",
                       "isDisabled": false,
                       "key": "0n5wlg83hb",
                       "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "isDeprecated": false,
-                      "rightColumn": 42,
+                      "rightColumn": 59,
                       "dynamicHeight": "FIXED",
                       "widgetId": "sar6ncqyb9",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -2181,6 +2168,14 @@
         },
         "layoutOnLoadActions": [
           [
+            {
+              "id": "Customer Sign Up_GetArtistName",
+              "name": "GetArtistName",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
             {
               "id": "Customer Sign Up_GetCustomers",
               "name": "GetCustomers",
