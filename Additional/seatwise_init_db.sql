@@ -108,7 +108,7 @@ CREATE TABLE Tickets (
 DROP TABLE IF EXISTS Dependent;
 
 CREATE TABLE Dependent (
-    DependentID int PRIMARY KEY,
+    DependentID int PRIMARY KEY auto_increment,
     FirstName varchar(255) NOT NULL,
     LastName varchar(255) NOT NULL,
     PhoneNumber varchar(25)  UNIQUE,
@@ -128,7 +128,7 @@ CREATE TABLE Dependent (
 DROP TABLE IF EXISTS Performance;
 
 CREATE TABLE Performance (
-    PerformanceID int PRIMARY KEY,
+    PerformanceID int PRIMARY KEY auto_increment,
     Date datetime,
     Description varchar(255),
     ArtistID int NOT NULL,
