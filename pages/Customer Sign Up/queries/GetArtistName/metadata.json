@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "GetCustomers",
+    "name": "GetArtistName",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/c/customers/names"
+        "url": "web:4000/c/customers/fanof"
       },
       "invalids": [],
       "messages": [],
@@ -38,7 +38,11 @@
       }
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "datasourceUrl"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
@@ -48,7 +52,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Customer Sign Up_GetCustomers",
+  "id": "Customer Sign Up_GetArtistName",
   "deleted": false,
-  "gitSyncId": "643db1ecc340f25a090c9a89_643ef3c0e01c63330ef035d2"
+  "gitSyncId": "643d9e0a52ea8e2efbe0a91c_643ef640d3442b57ab64931d"
 }
