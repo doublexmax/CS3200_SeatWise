@@ -1021,10 +1021,10 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "responsiveBehavior": "fill",
-              "originalTopRow": 88,
+              "originalTopRow": 86,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 157,
+              "originalBottomRow": 155,
               "minDynamicHeight": 10
             },
             {
@@ -1946,7 +1946,7 @@
               "originalTopRow": 4,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 78,
+              "originalBottomRow": 76,
               "minDynamicHeight": 10
             },
             {
@@ -2104,6 +2104,7 @@
                       "resetFormOnClick": true,
                       "boxShadow": "none",
                       "widgetName": "Button7",
+                      "onClick": "{{PostFavouriteArtist.run(() => showAlert('Success!'), () => showAlert('OOOF'))}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
@@ -2116,6 +2117,11 @@
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 52,
                       "dynamicBindingPathList": [
                         {
@@ -2279,10 +2285,10 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "responsiveBehavior": "fill",
-              "originalTopRow": 168,
+              "originalTopRow": 166,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 197,
+              "originalBottomRow": 195,
               "minDynamicHeight": 10
             }
           ]

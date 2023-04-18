@@ -7,7 +7,7 @@
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/c/customers/artist/fanof/{{Button7.selectedOptionValue}}"
+        "url": "web:4000/c/customers/artist/fanof/{{ChooseCustomer.selectedOptionValue}}"
       },
       "invalids": [],
       "messages": [],
@@ -29,7 +29,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "",
+      "body": "{{ChooseArtists.selectedOptionValues}}",
       "bodyFormData": [],
       "httpMethod": "POST",
       "selfReferencingDataPaths": [],
@@ -39,20 +39,24 @@
         }
       ],
       "formData": {
-        "apiContentType": "none"
+        "apiContentType": "application/json"
       }
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "datasourceUrl"
+      },
+      {
+        "key": "body"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Button7.selectedOptionValue"
+      "ChooseArtists.selectedOptionValues",
+      "ChooseCustomer.selectedOptionValue"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
