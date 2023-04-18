@@ -346,7 +346,7 @@
                         "call"
                       ],
                       "topRow": 23,
-                      "bottomRow": 30,
+                      "bottomRow": 29,
                       "parentRowSpace": 10,
                       "labelWidth": 5,
                       "type": "PHONE_INPUT_WIDGET",
@@ -373,11 +373,6 @@
                       "originalBottomRow": 29,
                       "widgetName": "DepPhoneCopy",
                       "displayName": "Phone Input",
-                      "searchTags": [
-                        "call"
-                      ],
-                      "bottomRow": 29,
-                      "parentRowSpace": 10,
                       "defaultDialCode": "+1",
                       "autoFocus": false,
                       "hideCard": false,
