@@ -7,7 +7,7 @@
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/v/venues/{{VenueOwner.selectedOptionValue}}"
+        "url": "web:4000/v/venues/{{VenueOwnerEdit.selectedOptionValue}}"
       },
       "invalids": [],
       "messages": [],
@@ -45,10 +45,10 @@
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
-        "key": "datasourceUrl"
+        "key": "body"
       },
       {
-        "key": "body"
+        "key": "datasourceUrl"
       }
     ],
     "isValid": true,
@@ -56,7 +56,7 @@
     "messages": [],
     "jsonPathKeys": [
       "EditVenue.data",
-      "VenueOwner.selectedOptionValue"
+      "VenueOwnerEdit.selectedOptionValue"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
