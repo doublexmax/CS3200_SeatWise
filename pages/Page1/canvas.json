@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 380,
+          "bottomRow": 400,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -25,7 +25,274 @@
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
-          "children": []
+          "children": [
+            {
+              "resetFormOnClick": false,
+              "boxShadow": "none",
+              "widgetName": "Button1",
+              "onClick": "{{navigateTo('VenueOwner Sign Up', {}, 'SAME_WINDOW')}}",
+              "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "displayName": "Button",
+              "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
+              "searchTags": [
+                "click",
+                "submit"
+              ],
+              "topRow": 21,
+              "bottomRow": 25,
+              "parentRowSpace": 10,
+              "type": "BUTTON_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 16.53125,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "leftColumn": 25,
+              "dynamicBindingPathList": [
+                {
+                  "key": "buttonColor"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "text": "Venue Owner Sign Up",
+              "isDisabled": false,
+              "key": "km3emwrng5",
+              "isDeprecated": false,
+              "rightColumn": 41,
+              "isDefaultClickDisabled": true,
+              "widgetId": "3y3up6q347",
+              "minWidth": 120,
+              "isVisible": true,
+              "recaptchaType": "V3",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "responsiveBehavior": "hug",
+              "disabledWhenInvalid": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "buttonVariant": "PRIMARY",
+              "placement": "CENTER"
+            },
+            {
+              "resetFormOnClick": false,
+              "boxShadow": "none",
+              "widgetName": "Button1Copy1",
+              "onClick": "{{navigateTo('Customer Sign Up', {}, 'SAME_WINDOW')}}",
+              "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "displayName": "Button",
+              "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
+              "searchTags": [
+                "click",
+                "submit"
+              ],
+              "topRow": 31,
+              "bottomRow": 35,
+              "parentRowSpace": 10,
+              "type": "BUTTON_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 16.53125,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "leftColumn": 25,
+              "dynamicBindingPathList": [
+                {
+                  "key": "buttonColor"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "text": "Customer Sign Up",
+              "isDisabled": false,
+              "key": "km3emwrng5",
+              "isDeprecated": false,
+              "rightColumn": 41,
+              "isDefaultClickDisabled": true,
+              "widgetId": "zma69yq42x",
+              "minWidth": 120,
+              "isVisible": true,
+              "recaptchaType": "V3",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "responsiveBehavior": "hug",
+              "disabledWhenInvalid": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "buttonVariant": "PRIMARY",
+              "placement": "CENTER"
+            },
+            {
+              "resetFormOnClick": false,
+              "boxShadow": "none",
+              "widgetName": "Button1Copy",
+              "onClick": "{{navigateTo('VenueOwner View Edit', {}, 'SAME_WINDOW')}}",
+              "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "displayName": "Button",
+              "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
+              "searchTags": [
+                "click",
+                "submit"
+              ],
+              "topRow": 26,
+              "bottomRow": 30,
+              "parentRowSpace": 10,
+              "type": "BUTTON_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 16.53125,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "leftColumn": 25,
+              "dynamicBindingPathList": [
+                {
+                  "key": "buttonColor"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "text": "Edit Venue Owner",
+              "isDisabled": false,
+              "key": "km3emwrng5",
+              "isDeprecated": false,
+              "rightColumn": 41,
+              "isDefaultClickDisabled": true,
+              "widgetId": "hpwyldz2cd",
+              "minWidth": 120,
+              "isVisible": true,
+              "recaptchaType": "V3",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "responsiveBehavior": "hug",
+              "disabledWhenInvalid": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "buttonVariant": "PRIMARY",
+              "placement": "CENTER"
+            },
+            {
+              "resetFormOnClick": false,
+              "boxShadow": "none",
+              "widgetName": "Button1CopyCopy",
+              "onClick": "{{navigateTo('Customer Purchase Edit', {}, 'SAME_WINDOW')}}",
+              "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "displayName": "Button",
+              "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
+              "searchTags": [
+                "click",
+                "submit"
+              ],
+              "topRow": 36,
+              "bottomRow": 40,
+              "parentRowSpace": 10,
+              "type": "BUTTON_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 16.53125,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "leftColumn": 25,
+              "dynamicBindingPathList": [
+                {
+                  "key": "buttonColor"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "text": "Edit Customer",
+              "isDisabled": false,
+              "key": "km3emwrng5",
+              "isDeprecated": false,
+              "rightColumn": 41,
+              "isDefaultClickDisabled": true,
+              "widgetId": "tufppw1yee",
+              "minWidth": 120,
+              "isVisible": true,
+              "recaptchaType": "V3",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "responsiveBehavior": "hug",
+              "disabledWhenInvalid": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "buttonVariant": "PRIMARY",
+              "placement": "CENTER"
+            },
+            {
+              "widgetName": "Text1",
+              "displayName": "Text",
+              "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+              "searchTags": [
+                "typography",
+                "paragraph",
+                "label"
+              ],
+              "topRow": 16,
+              "bottomRow": 20,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "parentColumnSpace": 16.53125,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 25,
+              "dynamicBindingPathList": [
+                {
+                  "key": "truncateButtonColor"
+                },
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "shouldTruncate": false,
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "text": "Choose Action",
+              "key": "ohrou72esr",
+              "isDeprecated": false,
+              "rightColumn": 41,
+              "textAlign": "LEFT",
+              "dynamicHeight": "AUTO_HEIGHT",
+              "widgetId": "0zsyugji7j",
+              "minWidth": 450,
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "responsiveBehavior": "fill",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "maxDynamicHeight": 9000,
+              "fontSize": "1rem",
+              "minDynamicHeight": 4
+            }
+          ]
         },
         "layoutOnLoadActions": [],
         "layoutOnLoadActionErrors": [],
