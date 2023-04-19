@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1100,
+          "bottomRow": 1140,
           "containerStyle": "none",
           "snapRows": 69,
           "parentRowSpace": 1,
@@ -36,7 +36,7 @@
                 "group"
               ],
               "topRow": 55,
-              "bottomRow": 110,
+              "bottomRow": 114,
               "parentRowSpace": 10,
               "type": "FORM_WIDGET",
               "hideCard": false,
@@ -57,7 +57,7 @@
                   "widgetName": "Canvas4",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 550,
+                  "bottomRow": 590,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -75,8 +75,8 @@
                       "searchTags": [
                         "call"
                       ],
-                      "topRow": 7,
-                      "bottomRow": 14,
+                      "topRow": 14,
+                      "bottomRow": 21,
                       "parentRowSpace": 10,
                       "labelWidth": 5,
                       "defaultDialCode": "+1",
@@ -87,7 +87,7 @@
                       "parentColumnSpace": 11.8779296875,
                       "dynamicTriggerPathList": [],
                       "resetOnSubmit": true,
-                      "leftColumn": 24,
+                      "leftColumn": 23,
                       "dynamicBindingPathList": [
                         {
                           "key": "accentColor"
@@ -103,7 +103,7 @@
                       "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "isDeprecated": false,
-                      "rightColumn": 44,
+                      "rightColumn": 43,
                       "dynamicHeight": "FIXED",
                       "widgetId": "wvq19v8i2q",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -133,8 +133,8 @@
                         "paragraph",
                         "label"
                       ],
-                      "topRow": 24,
-                      "bottomRow": 28,
+                      "topRow": 28,
+                      "bottomRow": 32,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -191,8 +191,8 @@
                         "number",
                         "textarea"
                       ],
-                      "topRow": 28,
-                      "bottomRow": 35,
+                      "topRow": 32,
+                      "bottomRow": 39,
                       "parentRowSpace": 10,
                       "labelWidth": 5,
                       "autoFocus": false,
@@ -252,8 +252,8 @@
                         "number",
                         "textarea"
                       ],
-                      "topRow": 35,
-                      "bottomRow": 42,
+                      "topRow": 39,
+                      "bottomRow": 46,
                       "parentRowSpace": 10,
                       "labelWidth": 5,
                       "autoFocus": false,
@@ -313,8 +313,8 @@
                         "number",
                         "textarea"
                       ],
-                      "topRow": 35,
-                      "bottomRow": 42,
+                      "topRow": 39,
+                      "bottomRow": 46,
                       "parentRowSpace": 10,
                       "labelWidth": 5,
                       "autoFocus": false,
@@ -374,8 +374,8 @@
                         "number",
                         "textarea"
                       ],
-                      "topRow": 42,
-                      "bottomRow": 49,
+                      "topRow": 46,
+                      "bottomRow": 53,
                       "parentRowSpace": 10,
                       "labelWidth": 5,
                       "autoFocus": false,
@@ -435,8 +435,8 @@
                         "number",
                         "textarea"
                       ],
-                      "topRow": 42,
-                      "bottomRow": 49,
+                      "topRow": 46,
+                      "bottomRow": 53,
                       "parentRowSpace": 10,
                       "labelWidth": 5,
                       "autoFocus": false,
@@ -599,8 +599,8 @@
                         "click",
                         "submit"
                       ],
-                      "topRow": 49,
-                      "bottomRow": 53,
+                      "topRow": 53,
+                      "bottomRow": 57,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
@@ -646,8 +646,8 @@
                         "number",
                         "textarea"
                       ],
-                      "topRow": 7,
-                      "bottomRow": 14,
+                      "topRow": 14,
+                      "bottomRow": 21,
                       "parentRowSpace": 10,
                       "labelWidth": 5,
                       "autoFocus": false,
@@ -705,8 +705,8 @@
                         "number",
                         "textarea"
                       ],
-                      "topRow": 15,
-                      "bottomRow": 22,
+                      "topRow": 21,
+                      "bottomRow": 28,
                       "parentRowSpace": 10,
                       "labelWidth": 5,
                       "autoFocus": false,
@@ -752,6 +752,63 @@
                       "iconAlign": "left",
                       "defaultText": "",
                       "minDynamicHeight": 4
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "ChooseOwner",
+                      "isFilterable": true,
+                      "displayName": "Select",
+                      "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
+                      "labelText": "Choose a Venue Owner",
+                      "searchTags": [
+                        "dropdown"
+                      ],
+                      "topRow": 7,
+                      "bottomRow": 14,
+                      "parentRowSpace": 10,
+                      "labelWidth": 5,
+                      "type": "SELECT_WIDGET",
+                      "serverSideFiltering": false,
+                      "hideCard": false,
+                      "defaultOptionValue": "",
+                      "animateLoading": true,
+                      "parentColumnSpace": 16.3017578125,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 2,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        },
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "options"
+                        }
+                      ],
+                      "labelPosition": "Top",
+                      "options": "{{GetVenueOwners.data}}",
+                      "placeholderText": "Select option",
+                      "isDisabled": false,
+                      "key": "69n52xdem3",
+                      "labelTextSize": "0.875rem",
+                      "isRequired": false,
+                      "isDeprecated": false,
+                      "rightColumn": 22,
+                      "dynamicHeight": "FIXED",
+                      "widgetId": "giqm36fu7d",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "minWidth": 450,
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "69mt9o28h9",
+                      "labelAlignment": "left",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "responsiveBehavior": "fill",
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "maxDynamicHeight": 9000,
+                      "minDynamicHeight": 4
                     }
                   ],
                   "key": "rfo6wjc7y0",
@@ -787,7 +844,7 @@
               "originalTopRow": 55,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 110,
+              "originalBottomRow": 114,
               "minDynamicHeight": 10
             },
             {
@@ -1307,7 +1364,18 @@
             }
           ]
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "VenueOwner Sign Up_GetVenueOwners",
+              "name": "GetVenueOwners",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
         "id": "VenueOwner Sign Up",
